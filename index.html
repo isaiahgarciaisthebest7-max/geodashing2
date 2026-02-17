@@ -1,0 +1,36 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Bugless Geometry Dash Clone with Level Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+        <div id="ui-container">
+            <div id="score">Score: 0</div>
+            <div id="high-score">High Score: 0</div>
+            <div id="attempts">Attempts: 0</div>
+            <div id="level-info">Level: Stereo Madness<br>%: 0<br>Coins: 0/3</div>
+            <div id="game-over">Game Over!<br>Press R to Restart</div>
+            <div id="level-complete">Level Complete!<br>Stars Earned: 1<br>Press R to Restart</div>
+            <div id="instructions">SPACE/Tap: Jump/Fly/Flip<br>P: Pause | M: Mute | F: FPS | E: Editor | ESC: Menu</div>
+            <div id="pause-menu">Paused<br>Press P to Resume</div>
+            <div id="fps-counter">FPS: 60</div>
+            <div id="editor-panel" style="display: none;">
+                <button id="add-spike">Add Spike</button>
+                <button id="add-block">Add Block</button>
+                <button id="add-coin">Add Coin</button>
+                <button id="add-portal">Add Portal</button>
+                <button id="save-level">Save Level</button>
+                <button id="load-level">Load Level</button>
+                <button id="exit-editor">Exit Editor</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
