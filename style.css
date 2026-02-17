@@ -1,0 +1,108 @@
+/* style.css */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #111, #333);
+    font-family: 'Courier New', monospace;
+    overflow: hidden;
+}
+
+#game-container {
+    position: relative;
+}
+
+#ui-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+#game-canvas {
+    background-color: #000;
+    border: 3px solid #fff;
+    box-shadow: 0 0 20px #fff;
+    display: block;
+    cursor: pointer;
+}
+
+#score, #high-score, #attempts, #level-info {
+    position: absolute;
+    top: 10px;
+    color: #fff;
+    font-size: 18px;
+    text-shadow: 2px 2px 4px #000;
+    pointer-events: none;
+}
+
+#score { left: 10px; }
+#high-score { right: 10px; }
+#attempts { top: 35px; right: 10px; }
+#level-info { left: 10px; top: 60px; font-size: 16px; }
+
+#game-over, #level-complete, #pause-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ff4444;
+    font-size: 32px;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000;
+    display: none;
+    pointer-events: none;
+}
+
+#level-complete { color: #44ff44; }
+
+#pause-menu { color: #ffff00; }
+
+#instructions {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #aaa;
+    font-size: 14px;
+    text-align: center;
+    pointer-events: none;
+}
+
+#fps-counter {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #00ff00;
+    font-size: 16px;
+    display: none;
+    pointer-events: none;
+}
+
+#editor-panel {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.7);
+    padding: 10px;
+    border: 1px solid #fff;
+    pointer-events: auto;
+}
+
+#editor-panel button {
+    margin: 5px;
+}
+
+@keyframes glow {
+    0%, 100% { box-shadow: 0 0 20px #fff; }
+    50% { box-shadow: 0 0 40px #fff, 0 0 60px #00ff00; }
+}
+
+#game-canvas:hover { animation: glow 2s infinite; }
